@@ -1,0 +1,9 @@
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+public class Kata {
+  public static boolean validPhoneNumber(String phoneNumber) {
+      Pattern p = Pattern.compile("^\\({1}[0-9]{3}\\){1}\\s[0-9]{3}-[0-9]{4}$");
+      Matcher m = p.matcher(phoneNumber);
+    return m.find();
+  }
+}
